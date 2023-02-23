@@ -1,0 +1,105 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 25% 50%;
+    gap: 15%
+}
+
+.about-me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+    display: grid;
+    place-items: center;
+}
+
+.about-profil {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.about-profil:hover{
+    transform: rotate(0deg);
+}
+
+.about-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.about-cards {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.about-cards:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.card-icon{
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-cards h5 {
+    font-size: 0.95rem;
+}
+
+.about-cards small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.about-conten p {
+    color: var(--color-light);
+    margin: 2rem 0 2.6rem;
+}
+
+/* ============ ukuran 1024px ============== */
+@media screen and (max-width: 1024px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about-me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    .about-conten p {
+        margin: 1rem 0 1.5rem
+    }
+}
+
+/* ============ ukuran 600px ================ */
+@media screen and (max-width: 600px) {
+    .about-me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about-card {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about-conten{
+        text-align: center;
+    }
+
+    .about-conten p {
+        margin: 1.5rem 0;
+
+    }
+}
